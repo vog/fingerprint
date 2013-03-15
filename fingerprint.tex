@@ -1,0 +1,36 @@
+\documentclass[a4paper,12pt]{scrartcl} % 2>/dev/null || <<'\end{document}'
+
+% Key ID to print
+\newcommand{\keyid}{7BE52077}
+
+% Author: Volker Grabsch <vog@notjusthosting.com>
+% This code is public domain.
+
+\usepackage[hmargin=1.3cm,vmargin=1.5cm]{geometry}
+\usepackage{xcolor}
+\usepackage{listings}
+\lstset{frame=shadowbox}
+\lstset{rulesepcolor=\color{gray}}
+\begin{document}
+\immediate\write18{gpg --fingerprint \keyid >fingerprint-plain.txt}
+\lstinputlisting{fingerprint-plain.txt}
+\vfill
+\lstinputlisting{fingerprint-plain.txt}
+\vfill
+\lstinputlisting{fingerprint-plain.txt}
+\vfill
+\lstinputlisting{fingerprint-plain.txt}
+\vfill
+\lstinputlisting{fingerprint-plain.txt}
+\vfill
+\lstinputlisting{fingerprint-plain.txt}
+\end{document}
+
+# Configure shell to abort in case of an unexpected error
+set -e
+
+# Generate PDF
+pdflatex --shell-escape fingerprint.tex
+
+# Remove temporary files
+rm -f fingerprint.aux fingerprint.log fingerprint-plain.txt
