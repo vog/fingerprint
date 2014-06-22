@@ -11,6 +11,7 @@
 \usepackage{listings}
 \lstset{frame=shadowbox}
 \lstset{rulesepcolor=\color{gray}}
+\lstset{breaklines=true, breakatwhitespace=true}
 \begin{document}
 \immediate\write18{gpg --fingerprint \keyid >fingerprint-plain.txt}
 \lstinputlisting{fingerprint-plain.txt}
