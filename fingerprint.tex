@@ -7,7 +7,7 @@
 % This code is public domain.
 
 \usepackage[hmargin=1.3cm,vmargin=1.5cm]{geometry}
-\usepackage{xcolor}
+\usepackage{xcolor,forloop}
 \usepackage{listings}
 \lstset{frame=shadowbox}
 \lstset{rulesepcolor=\color{gray}}
@@ -15,16 +15,9 @@
 \begin{document}
 \immediate\write18{gpg --fingerprint \keyid >fingerprint-plain.txt}
 \lstinputlisting{fingerprint-plain.txt}
-\vfill
-\lstinputlisting{fingerprint-plain.txt}
-\vfill
-\lstinputlisting{fingerprint-plain.txt}
-\vfill
-\lstinputlisting{fingerprint-plain.txt}
-\vfill
-\lstinputlisting{fingerprint-plain.txt}
-\vfill
-\lstinputlisting{fingerprint-plain.txt}
+\newcounter{ct}
+\forloop{ct}{1}{\value{ct}<6}{\vfill
+\lstinputlisting{fingerprint-plain.txt}}
 \end{document}
 
 # Configure shell to abort in case of an unexpected error
