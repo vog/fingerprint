@@ -3,6 +3,9 @@
 % Key ID to print
 \newcommand{\keyid}{7BE52077}
 
+% Number of repetitions
+\newcommand{\repetitions}{5}
+
 % Author: Volker Diels-Grabsch <v@njh.eu>
 % This code is public domain.
 
@@ -17,7 +20,7 @@
 \immediate\write18{gpg2 --fingerprint \keyid >fingerprint-plain.txt}
 \lstinputlisting{fingerprint-plain.txt}
 \newcounter{ct}
-\forloop{ct}{1}{\value{ct}<5}{\vfill
+\forloop{ct}{1}{\value{ct}<\repetitions}{\vfill
 \lstinputlisting{fingerprint-plain.txt}}
 \end{document}
 
