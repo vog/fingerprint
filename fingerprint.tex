@@ -14,7 +14,7 @@
 \lstset{rulesepcolor=\color{gray}}
 \lstset{breaklines=true, breakatwhitespace=true}
 \begin{document}
-\immediate\write18{gpg --fingerprint \keyid >fingerprint-plain.txt}
+\immediate\write18{gpg2 --fingerprint \keyid >fingerprint-plain.txt}
 \lstinputlisting{fingerprint-plain.txt}
 \newcounter{ct}
 \forloop{ct}{1}{\value{ct}<5}{\vfill
