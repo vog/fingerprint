@@ -21,6 +21,12 @@
         padding-top: 0.5em;
         padding-bottom: 0.5em;
       }
+      h2 {
+        font-size: 12pt;
+        font-family: sans-serif;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+      }
       pre {
         font-size: 8pt;
         border: thin dotted #ccc;
@@ -52,10 +58,10 @@
     <h1>Print Your GPG Fingerprint</h1>
     <p>
       Print your GPG key fingerprint with LaTeX,
-      and be better prepared for the next
+      and be better prepared for
+      <a href="http://keysigning.org/methods/adhoc">ad hoc signings</a>
+      at the next
       <a href="https://en.wikipedia.org/wiki/Key_signing_party">key signing party</a>!
-      Well, at least if the party is using the
-      <a href="http://keysigning.org/methods/adhoc">ad hoc method</a>.
     </p>
     <p>
       First, download the LaTeX code which is public domain:
@@ -71,25 +77,23 @@
     </p>
     <pre>sh fingerprint.tex</pre>
     <p>
-      This short command works because
-      the LaTeX code is written in a special way,
-      such that
-      <a href="http://www.profv.de/literate-programming/">it's also a working shell script</a>
-      which executes <code>pdflatex</code> and removes all temporary files.
-    </p>
-    <p>
-      Of course, you can also call <code>pdflatex</code> by hand:
-    </p>
-    <pre>pdflatex --shell-escape fingerprint.tex</pre>
-    <p>
-      The result is shown below.
-      Note that you need the <code>--shell-escape</code> option,
-      otherwise the LaTeX file isn't allowed
-      to run <code>GPG</code> to retrieve your key fingerprint.
-    </p>
-    <p>
+      The <a href="#result">result</a> is shown below.
       Have fun!
     </p>
+    <h2 id="internals">Internals</h2>
+    <p>
+      The short command <code>sh fingerprint.tex</code> works because
+      the LaTeX code is written in a special way,
+      so
+      <a href="http://www.profv.de/literate-programming/">it is also a working shell script</a>
+      which executes <code>pdflatex</code> and removes all temporary files.
+      Of course, you can also call <code>pdflatex</code> by hand.
+      In that case, don't forget to provide the <code>--shell-escape</code> option,
+      otherwise the LaTeX file isn't allowed
+      to run <code>GPG</code> to retrieve your key fingerprint:
+    </p>
+    <pre>pdflatex --shell-escape fingerprint.tex</pre>
+    <h2 id="result">Result</h2>
     <a href="example.pdf"><img src="example.png" alt="example output"></a>
     <p>
       (In case you want to know,
