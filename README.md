@@ -40,6 +40,7 @@ which executes `pdflatex` and removes all temporary files.
 Of course, you can also call `pdflatex` by hand. In that case, don't
 forget to provide the `--shell-escape` option, otherwise the LaTeX file
 isn't allowed to run `GPG` to retrieve your key fingerprint:
+
 ```
 pdflatex --shell-escape fingerprint.tex
 ```
