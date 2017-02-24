@@ -1,3 +1,0 @@
-# Print Your GPG Fingerprint
-
-See [[https://vog.github.io/fingerprint/][project homepage]] for more details.
