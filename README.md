@@ -29,7 +29,7 @@ The [result](#result) is shown below. Have fun!
 
 ## Related Projects
 
-* `gpg-key2ps` from the [signing-party](https://packages.debian.org/sid/signing-party)
+* `gpg-key2ps` from the [signing-party](https://packages.debian.org/sid/signing-party) package
 
 ## Internals
 
