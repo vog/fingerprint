@@ -1,4 +1,4 @@
-# Print Your GPG Fingerprint
+## Instructions
 
 Print your GPG key fingerprint with LaTeX, and be better prepared for
 [ad hoc signings](http://keysigning.org/methods/adhoc) at the next
