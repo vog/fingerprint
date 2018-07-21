@@ -4,11 +4,18 @@ Print your GPG key fingerprint with LaTeX, and be better prepared for
 [ad hoc signings](http://keysigning.org/methods/adhoc) at the next
 [key signing party](https://en.wikipedia.org/wiki/Key_signing_party)!
 
-First, download the LaTeX code which is public domain:
+Install LaTeX with <code>koma-script</code> if haven't already done so.
+On Debian based systems, the installation command is:
+
+```
+apt-get install texlive-latex-recommended
+```
+
+Download the LaTeX code which is public domain:
 
 * [fingerprint.tex](fingerprint.tex)
 
-Then, adjust the key ID so it will print your own key rather than mine.
+Adjust the key ID so it will print your own key rather than mine.
 Also adjust the number of repetitions to fill the page:
 
 ```
