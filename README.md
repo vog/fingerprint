@@ -4,11 +4,12 @@ Print your GPG key fingerprint with LaTeX, and be better prepared for
 [ad hoc signings](http://keysigning.org/methods/adhoc) at the next
 [key signing party](https://en.wikipedia.org/wiki/Key_signing_party)!
 
-Install LaTeX with <code>koma-script</code> if haven't already done so.
-On Debian based systems, the installation command is:
+Install LaTeX with <code>koma-script</code> and <code>forloop</code>
+if haven't already done so.  On Debian based systems, the installation
+command is:
 
 ```
-apt-get install texlive-latex-recommended
+apt-get install texlive-latex-extra
 ```
 
 Download the LaTeX code which is public domain:
